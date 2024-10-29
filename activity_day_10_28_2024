@@ -1,0 +1,137 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "nomes = []\n",
+        "for i in range(5):\n",
+        "  nomes.append(input(f\"Digite a {i+1}ª letra: \"))\n",
+        "\n",
+        "nomes.sort(a)\n",
+        "for i in nomes:\n",
+        "  print(i)\n"
+      ],
+      "metadata": {
+        "id": "xRKatFwqTu_z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kg = 4.35\n",
+        "peso = []\n",
+        "total = 0\n",
+        "produtos = int(input(\"Quantos produtos foram vendidos no dia? \"))\n",
+        "\n",
+        "for x in range(produtos):\n",
+        "  peso.append(float(input(f\"Digite o peso do {x+1}º produto: \")))\n",
+        "  total += (peso[x] * kg)\n",
+        "\n",
+        "media = sum(peso)/produtos\n",
+        "print(f\"A média dos pesos é {media:.2f}.\\nO maior peso vendido foi de {max(peso)}kg.\\nO menos peso vendido foi de {min(peso)}kg.\\nO total arrecadado no dia foi de R${total:.2f}.\")"
+      ],
+      "metadata": {
+        "id": "VC0jRnlrYoBk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notas = []\n",
+        "notas_altas = []\n",
+        "\n",
+        "for nota in range(5):\n",
+        "  notas.append(float(input(f\"Digita a {nota+1}ª nota: \")))\n",
+        "\n",
+        "media = sum(notas)/5\n",
+        "\n",
+        "for x in notas:\n",
+        "  if x > media:\n",
+        "    notas_altas.append(x)\n",
+        "print(f\"A média é {media:.2f}.\\nNotas acima da média:\")\n",
+        "for i in notas_altas:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "id": "enVmgx9akpwO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "inteiros = []\n",
+        "\n",
+        "for x in range(10):\n",
+        "  inteiros.append(int(input(f\"Digite o {x+1}º valor: \")))\n",
+        "print(f\"Aqui está a lista dos números adicionados:\\n{inteiros}\")\n",
+        "\n",
+        "pares = []\n",
+        "impares = []\n",
+        "\n",
+        "for x in inteiros:\n",
+        "  if x % 2 == 0:\n",
+        "    pares.append(x)\n",
+        "  else:\n",
+        "    impares.append(x)\n",
+        "pares.sort()\n",
+        "impares.sort()\n",
+        "print(f\"Aqui está a lista de números pares:\\n{pares}\\nAqui está a lista de números ímpares:\\n{impares}\")"
+      ],
+      "metadata": {
+        "id": "V537QLiFnKjY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "menu = \"\"\n",
+        "saltos = []\n",
+        "\n",
+        "while menu != \"sair\" and menu != \"Sair\" and menu != \"SAIR\":\n",
+        "  atleta = input(\"Qual o nome do atleta: \")\n",
+        "  saltos.clear()\n",
+        "  for x in range(5):\n",
+        "    saltos.append(float(input(f\"Qual a altura do {x+1}º salto? \")))\n",
+        "\n",
+        "  media = sum(saltos)/5\n",
+        "  print(\"\\n  \")\n",
+        "  print(\"     ****Resultados****\")\n",
+        "  print(\"\\n  \")\n",
+        "  print(f\"Atleta {atleta}:\")\n",
+        "  for posicao, salto in enumerate(saltos):\n",
+        "    print(f\"{posicao+1}º salto: {salto}m\")\n",
+        "  print(\"\\n  \")\n",
+        "  print(f\"O resultado da média dos saltos foi {media:.2f}m!\")\n",
+        "  print(\"\\n  \")\n",
+        "  menu = input(\"Se não deseja continuar digite sair: \")\n",
+        ""
+      ],
+      "metadata": {
+        "id": "B0Xfbk7Duy8I"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Olá, este é o Colaboratory",
+      "toc_visible": true,
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
