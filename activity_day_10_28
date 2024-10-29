@@ -1,0 +1,292 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DavidCarlosfs/fast/blob/main/activity_day_10_28\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nomes = []\n",
+        "for i in range(5):\n",
+        "  nomes.append(input(f\"Digite a {i+1}ª letra: \"))\n",
+        "\n",
+        "nomes.sort(a)\n",
+        "for i in nomes:\n",
+        "  print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xRKatFwqTu_z",
+        "outputId": "e27d9159-5c5f-414e-b724-46a3f8d272d3"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a 1ª letra: t\n",
+            "Digite a 2ª letra: z\n",
+            "Digite a 3ª letra: a\n",
+            "Digite a 4ª letra: b\n",
+            "Digite a 5ª letra: p\n",
+            "a\n",
+            "b\n",
+            "p\n",
+            "t\n",
+            "z\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kg = 4.35\n",
+        "peso = []\n",
+        "total = 0\n",
+        "produtos = int(input(\"Quantos produtos foram vendidos no dia? \"))\n",
+        "\n",
+        "for x in range(produtos):\n",
+        "  peso.append(float(input(f\"Digite o peso do {x+1}º produto: \")))\n",
+        "  total += (peso[x] * kg)\n",
+        "\n",
+        "media = sum(peso)/produtos\n",
+        "print(f\"A média dos pesos é {media:.2f}.\\nO maior peso vendido foi de {max(peso)}kg.\\nO menos peso vendido foi de {min(peso)}kg.\\nO total arrecadado no dia foi de R${total:.2f}.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VC0jRnlrYoBk",
+        "outputId": "86c9e010-d08e-452f-9e1a-1b373508249f"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Quantos produtos foram vendidos no dia? 3\n",
+            "Digite o peso do 1º produto: 5\n",
+            "Digite o peso do 2º produto: 5\n",
+            "Digite o peso do 3º produto: 5\n",
+            "A média dos pesos é 5.0.\n",
+            "O maior peso vendido foi de 5.0kg.\n",
+            "O menos peso vendido foi de 5.0kg.\n",
+            "O total arrecadado no dia foi de R$65.25.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notas = []\n",
+        "notas_altas = []\n",
+        "\n",
+        "for nota in range(5):\n",
+        "  notas.append(float(input(f\"Digita a {nota+1}ª nota: \")))\n",
+        "\n",
+        "media = sum(notas)/5\n",
+        "\n",
+        "for x in notas:\n",
+        "  if x > media:\n",
+        "    notas_altas.append(x)\n",
+        "print(f\"A média é {media:.2f}.\\nNotas acima da média:\")\n",
+        "for i in notas_altas:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "enVmgx9akpwO",
+        "outputId": "675e55eb-bf7f-43de-c545-1e4940825577"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digita a 1ª nota: 10\n",
+            "Digita a 2ª nota: 5\n",
+            "Digita a 3ª nota: 5\n",
+            "Digita a 4ª nota: 4\n",
+            "Digita a 5ª nota: 7\n",
+            "A média é 6.2.\n",
+            "Notas acima da média:\n",
+            "10.0\n",
+            "7.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "inteiros = []\n",
+        "\n",
+        "for x in range(10):\n",
+        "  inteiros.append(int(input(f\"Digite o {x+1}º valor: \")))\n",
+        "print(f\"Aqui está a lista dos números adicionados:\\n{inteiros}\")\n",
+        "\n",
+        "pares = []\n",
+        "impares = []\n",
+        "\n",
+        "for x in inteiros:\n",
+        "  if x % 2 == 0:\n",
+        "    pares.append(x)\n",
+        "  else:\n",
+        "    impares.append(x)\n",
+        "pares.sort()\n",
+        "impares.sort()\n",
+        "print(f\"Aqui está a lista de números pares:\\n{pares}\\nAqui está a lista de números ímpares:\\n{impares}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V537QLiFnKjY",
+        "outputId": "4ebdba6e-e8ce-4178-9789-ad2461a8185f"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o 1º valor: 1\n",
+            "Digite o 2º valor: 90\n",
+            "Digite o 3º valor: 36\n",
+            "Digite o 4º valor: 33\n",
+            "Digite o 5º valor: 13\n",
+            "Digite o 6º valor: 7\n",
+            "Digite o 7º valor: 6\n",
+            "Digite o 8º valor: 8\n",
+            "Digite o 9º valor: 2\n",
+            "Digite o 10º valor: 99\n",
+            "Aqui está a lista dos números adicionados:\n",
+            "[1, 90, 36, 33, 13, 7, 6, 8, 2, 99]\n",
+            "Aqui está a lista de números pares:\n",
+            "[2, 6, 8, 36, 90]\n",
+            "Aqui está a lista de números ímpares:\n",
+            "[1, 7, 13, 33, 99]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "menu = \"\"\n",
+        "saltos = []\n",
+        "\n",
+        "while menu != \"sair\" and menu != \"Sair\" and menu != \"SAIR\":\n",
+        "  atleta = input(\"Qual o nome do atleta: \")\n",
+        "  saltos.clear()\n",
+        "  for x in range(5):\n",
+        "    saltos.append(float(input(f\"Qual a altura do {x+1}º salto? \")))\n",
+        "\n",
+        "  media = sum(saltos)/5\n",
+        "  print(\"\\n  \")\n",
+        "  print(\"     ****Resultados****\")\n",
+        "  print(\"\\n  \")\n",
+        "  print(f\"Atleta {atleta}:\")\n",
+        "  for posicao, salto in enumerate(saltos):\n",
+        "    print(f\"{posicao+1}º salto: {salto}m\")\n",
+        "  print(\"\\n  \")\n",
+        "  print(f\"O resultado da média dos saltos foi {media:.2f}m!\")\n",
+        "  print(\"\\n  \")\n",
+        "  menu = input(\"Se não deseja continuar digite sair: \")\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B0Xfbk7Duy8I",
+        "outputId": "2cbfe5cf-0ddb-4a01-bbc7-0af662c56c87"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Qual o nome do atleta: David\n",
+            "Qual a altura do 1º salto? 4.5\n",
+            "Qual a altura do 2º salto? 3.6\n",
+            "Qual a altura do 3º salto? 5.4\n",
+            "Qual a altura do 4º salto? 3.5\n",
+            "Qual a altura do 5º salto? 4.6\n",
+            "\n",
+            "  \n",
+            "     ****Resultados****\n",
+            "\n",
+            "  \n",
+            "Atleta David:\n",
+            "1º salto: 4.5m\n",
+            "2º salto: 3.6m\n",
+            "3º salto: 5.4m\n",
+            "4º salto: 3.5m\n",
+            "5º salto: 4.6m\n",
+            "\n",
+            "  \n",
+            "O resultado da média dos saltos foi 4.32m!\n",
+            "\n",
+            "  \n",
+            "Se não deseja continuar digite sair: não\n",
+            "Qual o nome do atleta: Carlos\n",
+            "Qual a altura do 1º salto? 5.4\n",
+            "Qual a altura do 2º salto? 3.5\n",
+            "Qual a altura do 3º salto? 4.5\n",
+            "Qual a altura do 4º salto? 4.7\n",
+            "Qual a altura do 5º salto? 5\n",
+            "\n",
+            "  \n",
+            "     ****Resultados****\n",
+            "\n",
+            "  \n",
+            "Atleta Carlos:\n",
+            "1º salto: 5.4m\n",
+            "2º salto: 3.5m\n",
+            "3º salto: 4.5m\n",
+            "4º salto: 4.7m\n",
+            "5º salto: 5.0m\n",
+            "\n",
+            "  \n",
+            "O resultado da média dos saltos foi 4.62m!\n",
+            "\n",
+            "  \n",
+            "Se não deseja continuar digite sair: sair\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Olá, este é o Colaboratory",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
